@@ -1,12 +1,15 @@
 import { ActionReducerMap, createSelector, MetaReducer } from "@ngrx/store";
 import * as fromMovies from "./movie.reducer";
+import * as fromBooks from "./books.reducer";
 
 export interface State {
   movies: fromMovies.State;
+  books: fromBooks.State;
 }
 
 export const reducers: ActionReducerMap<State> = {
-  movies: fromMovies.reducer
+  movies: fromMovies.reducer,
+  books: fromBooks.reducer
 };
 
 export const metaReducers: MetaReducer<State>[] = [];
@@ -16,6 +19,10 @@ export const metaReducers: MetaReducer<State>[] = [];
  */
 export const selectMovieState = (state: State) => state.movies;
 
+
+/**
+ * Movies 
+ */
 export const selectMovieEntities = createSelector(
   selectMovieState,
   fromMovies.selectEntities
@@ -40,3 +47,8 @@ export const selectMoviesEarningsTotal = createSelector(
   selectMovieState,
   fromMovies.selectEarningsTotal
 );
+
+
+/**
+ * Books 
+ */

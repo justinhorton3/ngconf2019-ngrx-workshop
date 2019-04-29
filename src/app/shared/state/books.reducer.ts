@@ -29,3 +29,45 @@ const updateBook = (books: Book[], book: Book) =>
   });
 const deleteBook = (books: Book[], book: Book) =>
   books.filter(w => book.id !== w.id);
+
+export interface State {
+  activeBookId: string | null;
+  books: Book[];
+}
+
+export const initialState = {
+  activeBookId: null,
+  books: initialBooks
+};
+
+export function reducer(state = initialState, action: any): State {
+  switch (action.type) {
+    case "select":
+      return {
+        activeBookId: action.bookId,
+        books: state.books
+      };
+    case "clear select":
+      return {
+        activeBookId: null,
+        books: state.books
+      };
+    case "create":
+      return {
+        activeBookId: null,
+        books: createBook(state.books, action.book)
+      };
+    case "update":
+      return {
+        activeBookId: null,
+        books: updateBook(state.books, action.book)
+      };
+    case "delete":
+      return {
+        activeBookId: null,
+        books: deleteBook(state.books, action.book)
+      };
+    default:
+      return state;
+  }
+}

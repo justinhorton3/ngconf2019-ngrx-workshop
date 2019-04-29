@@ -13,5 +13,18 @@
       "earnings": 50000000
     }
   ],
-  "books": []
+  "books": [
+    {
+      "id": "9aa3221e-396d-444c-a8fd-8734e0d69b40",
+      "name": "jsdfj",
+      "earnings": null,
+      "description": null
+    },
+    {
+      "id": "fcb5283b-e1f3-49cd-9c46-7e858f45f56c",
+      "name": "jsdfj",
+      "earnings": "sdfj",
+      "description": "sdfj"
+    }
+  ]
 }
