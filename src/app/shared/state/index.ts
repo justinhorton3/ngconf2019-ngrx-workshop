@@ -19,10 +19,6 @@ export const metaReducers: MetaReducer<State>[] = [];
  */
 export const selectMovieState = (state: State) => state.movies;
 
-
-/**
- * Movies 
- */
 export const selectMovieEntities = createSelector(
   selectMovieState,
   fromMovies.selectEntities
@@ -48,7 +44,19 @@ export const selectMoviesEarningsTotal = createSelector(
   fromMovies.selectEarningsTotal
 );
 
+export const selectBooksState = (state: State) => state.books;
 
-/**
- * Books 
- */
+export const selectAllBooks = createSelector(
+  selectBooksState,
+  fromBooks.selectAll
+);
+
+export const selectActiveBook = createSelector(
+  selectBooksState,
+  fromBooks.selectActiveBook
+);
+
+export const selectBookEarningsTotals = createSelector(
+  selectBooksState,
+  fromBooks.selectEarningsTotals
+);

@@ -1,16 +1,10 @@
 {
   "movies": [
     {
-      "id": "1",
-      "name": "Interstellar",
-      "description": "Space",
-      "earnings": 25000000
-    },
-    {
-      "id": "2",
-      "name": "Inception",
-      "description": "I forgot",
-      "earnings": 50000000
+      "id": "b707f555-f8de-478d-921b-c01fb6060708",
+      "name": "Hello World 1",
+      "earnings": "10",
+      "description": "D Rating "
     }
   ],
   "books": [
