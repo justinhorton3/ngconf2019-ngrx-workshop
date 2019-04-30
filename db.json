@@ -10,14 +10,20 @@
   "books": [
     {
       "id": "9aa3221e-396d-444c-a8fd-8734e0d69b40",
-      "name": "jsdfj",
-      "earnings": null,
+      "name": "My Book",
+      "earnings": 1.00,
       "description": null
     },
     {
       "id": "fcb5283b-e1f3-49cd-9c46-7e858f45f56c",
-      "name": "jsdfj",
-      "earnings": "sdfj",
+      "name": "My Bio",
+      "earnings": "123123",
+      "description": "sdfj"
+    },
+    {
+      "id": "gcb5283b-e1f3-49cd-9c46-7e858f45f57c",
+      "name": "The Story of my Life",
+      "earnings": "123123",
       "description": "sdfj"
     }
   ]
